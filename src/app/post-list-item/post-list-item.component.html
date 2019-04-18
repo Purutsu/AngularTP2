@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': likePost > 0, 'list-group-item-danger': likePost < 0}">
+  <h3 class="text-left col-xs-6">{{ titrePost | uppercase}}</h3>
+  <h3 class="text-right col-xs-6">{{ datePost | date:'short' }}</h3>
+  <div>{{ contentPost }}</div>
+  <div>
+    <button class="btn btn-success" (click)="Like()">Like</button>
+    <button class="btn btn-danger" (click)="Hate()">Dislike</button>
+    <span class="example-fill-remaining-space"></span>
+    <button class="btn btn-danger" (click)="DeletePost()">Supprimer Post</button>
+</div>
+</li>
